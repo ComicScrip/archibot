@@ -59,11 +59,11 @@ function Akinator() {
 
   const getAkinator = () => {
     axios
-      .get('https://akinator-api.wild-projects.duckdns.org/newsession')
+      .get('https://akinator-api.comicscrip.duckdns.org/newsession')
       .then((response) => {
         setSession(response.data.sessionId);
         return axios.get(
-          `https://akinator-api.wild-projects.duckdns.org/nextquestion?sessionId=${response.data.sessionId}`
+          `https://akinator-api.comicscrip.duckdns.org/nextquestion?sessionId=${response.data.sessionId}`
         );
       })
       .then((response) => {
