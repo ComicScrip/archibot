@@ -27,7 +27,7 @@ function Akinator() {
   const nextQuestion = (answerIndex) => {
     axios
       .get(
-        `https://akinator-api.wild-projects.duckdns.org/nextquestion?sessionId=${session}&answer=${answerIndex}`
+        `https://akinator-api.comicscrip.duckdns.org/nextquestion?sessionId=${session}&answer=${answerIndex}`
       )
       .then((response) => response.data)
       .then((response) => {
