@@ -1,0 +1,187 @@
+@import 'variablesCSS';
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homeBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  overflow-x: hidden;
+  background: linear-gradient(
+    $primary-color,
+    $secondary-color,
+    $third-color,
+    $secondary-color,
+    $primary-color
+  );
+  text-align: center;
+  position: fixed;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.homeBubble {
+  display: flex;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  width: 90%;
+  min-height: 150px;
+  margin-bottom: 30px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Turret Road', cursive;
+  font-size: 19px;
+
+  &:after {
+    content: '';
+    background-color: #fff;
+    border-radius: 60%;
+    display: block;
+    position: absolute;
+    z-index: -2;
+    bottom: -20px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    box-shadow: -20px 25px 0px -9px #fff, -10px 15px 0 -5px #fff;
+  }
+}
+
+// .tip {
+//   color: black;
+//   overflow: hidden; /* Ensures the content is not revealed until the animation */
+//   border-right: 0.15em solid orange; /* The typwriter cursor */
+//   white-space: nowrap; /* Keeps the content on a single line */
+//   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+//   letter-spacing: 0.15em; /* Adjust as needed */
+//   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+// }
+
+// /* The typing effect */
+// @keyframes typing {
+//   from {
+//     width: 0;
+//   }
+//   to {
+//     width: 100%;
+//   }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+//   from,
+//   to {
+//     border-color: transparent;
+//   }
+//   50% {
+//     border-color: $third-color;
+//   }
+// }
+
+.imageContainer {
+  background-image: url('../Images/robot.gif');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 40px;
+  z-index: 0;
+  img {
+    height: auto;
+    width: 400px;
+    position: relative;
+    top: -240px;
+    left: -20px;
+  }
+}
+
+.homebuttons {
+  margin-bottom: 70px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  z-index: 0;
+  button {
+    border: 3px solid lighten(#e16c69, 8%);
+    margin: 20px 20px;
+    border-radius: 20px;
+    height: 80px;
+    width: 200px;
+    &:active {
+      background-color: #bb5759;
+      box-shadow: 0 4px #666;
+    }
+  }
+
+  button,
+  a {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: #e16c69;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  a {
+    padding: 2px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  /*Tablette*/
+  .homeBubble {
+    margin: 0;
+    width: 70%;
+  }
+
+  .homebuttons {
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*Desktop*/
+  .homeBubble {
+    margin: 0;
+    margin-bottom: 50px;
+    width: 50%;
+  }
+
+  .homebuttons {
+    justify-content: center;
+    margin-bottom: 100px;
+    a {
+      font-size: 19px;
+      padding: 18px;
+    }
+  }
+
+  .imageContainer {
+    margin-bottom: 50px;
+  }
+}
